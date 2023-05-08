@@ -1,0 +1,53 @@
+/* content */
+.visitor {
+  margin: 100px auto;
+  max-width: 1300px;
+}
+
+.anonymous {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding:20px;
+  width: 97%;
+}
+
+.anonymous label {
+  margin: 0px 20px 0px 20px;
+}
+
+.anonymous button {
+  margin-left: 30px;
+}
+
+.friend {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding:20px;
+  width: 97%;
+}
+
+.friend label {
+  margin: 0px 20px 0px 20px;
+}
+
+.write_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+#visitor_content {
+	width:900px;
+	height:auto;
+} 

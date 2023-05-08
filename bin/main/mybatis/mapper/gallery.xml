@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.springboot.dao.galleryDao">
+
+	<!-- 사진등록 -->
+	<insert id="insertGallery" parameterType="com.study.springboot.dto.galleryDto">
+	INSERT INTO
+	gallery (gallery_idx,gallery_title,gallery_image,gallery_content,gallery_date,gallery_id)
+	VALUES
+	(#{gallery_idx}, #{gallery_title}, #{gallery_image}, #{gallery_content}, sysdate(), #{gallery_id})
+	</insert>
+	
+	<!-- 사진 조회 -->
+	<select id="gallery" resultType="com.study.springboot.dto.galleryDto">
+	SELECT
+		gallery_idx,gallery_title,gallery_image,gallery_content,gallery_date,gallery_id
+	FROM
+		gallery
+	WHERE
+		gallery_idx = #{param1}
+	ORDER BY 
+		gallery_date DESC
+	
+	</select>
+	
+	<!-- 사진 목록 조회 -->
+	<select id="galleryDto" resultType="com.study.springboot.dto.galleryDto">
+			SELECT
+		gallery_idx,gallery_title,gallery_image,gallery_content,gallery_date,gallery_id
+	FROM
+		gallery
+	ORDER BY 
+		gallery_date DESC
+	</select>
+	
+	<!-- 사진 수정 -->
+	<update id="photoRevise" parameterType="HashMap">
+	UPDATE
+		gallery
+	SET
+		gallery_title = #{gallery_title},
+		gallery_content= #{gallery_content},
+		gallery_image = #{gallery_image}
+	</update>
+	
+	<delete id="photoDelete">
+	DELETE FROM
+		gallery
+	WHERE
+		gallery_idx = #{param1}
+	</delete>
+	
+	
+</mapper>

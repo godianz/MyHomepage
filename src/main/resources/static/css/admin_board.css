@@ -1,0 +1,44 @@
+.contnet_main {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#diary_title {
+	width:750px;
+	margin-left:10px;
+}
+
+.content_title {
+	display: flex;
+	justify-content: center;
+	padding:5px;
+	margin:10px;
+}
+.btnClass {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ReviseBtn{
+	width:100px;
+}
+
+.content_footer {
+	display: flex;
+	flex-direction: column;
+	align-items:flex-end;
+	margin-right:550px;
+	padding:5px;
+}
+
+.ck.ck-editor {
+	width: 80%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.ck-editor__editable {
+	height: 80vh;
+}
